@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop UZ</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="loader-wrapper hidden">
+      <div class="loader"></div>
+    </div>
+
+    <div class="box-container container">
+      <div class="box-discription">
+        <img
+          style="border-radius: 10px"
+          src="./images/images.png"
+          alt=""
+          width="150px"
+          height="70px"
+        />
+        <div class="boxs">
+          <input
+            type="text"
+            placeholder="Mahsulotlar va toifalarni qidiring                 🔎"
+          />
+        </div>
+
+        <div class="hero">
+          <div class="hero-button">
+            <a class="hero-title" href="">
+              <img
+                src="./images/people.webp"
+                alt=""
+                width="25px"
+                height="25px"
+              />
+              <h2 class="hero-text">Tizimga kirish</h2>
+            </a>
+          </div>
+          <div class="hero-button">
+            <a class="hero-title" href="">
+              <img
+                src="./images/heart-128.webp"
+                alt=""
+                width="25px"
+                height="25px"
+              />
+              <h2 class="hero-text">Tanlangan</h2>
+            </a>
+          </div>
+          <div class="hero-button">
+            <a class="hero-title" href="">
+              <img
+                src="./images/basket.png"
+                alt=""
+                width="25px"
+                height="25px"
+              />
+              <h2 class="hero-text">Savat</h2>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container"></div>
+
+    <template id="product-template">
+      <a href="#" class="card">
+        <div class="card-icons">
+          <img
+            src="./images/heart-128.webp"
+            alt="Yurakcha"
+            width="20px"
+            height="20px"
+          />
+          <div class="cart-icon">
+            <img
+              src="./images/basket.png"
+              alt="Savatcha"
+              width="20px"
+              height="20px"
+            />
+          </div>
+        </div>
+        <img class="images" src="" alt="" />
+        <h2 class="title"></h2>
+        <div class="card-prices">
+          <p class="prices"></p>
+        </div>
+        <p class="rating"></p>
+      </a>
+    </template>
+
+    <footer class="footer">
+      <div class="footer-container container">
+        <div class="footer-title">
+          <div class="footer-titles">
+            <p class="footer-text">Biz haqimizda</p>
+            <h3 class="footer-texts">Qabul qilish punktlari</h3>
+            <h3 class="footer-texts">Bo'sh ish o'rinlari</h3>
+          </div>
+          <div class="footer-titles">
+            <p class="footer-text">Foydalanuvchilar uchun</p>
+            <h3 class="footer-texts">Biz bilan bog'lanish</h3>
+            <h3 class="footer-texts">Savol javob</h3>
+          </div>
+
+          <div class="footer-image">
+            <h2>Ijtimoiy tarmoqlar</h2>
+            <div class="footer-img">
+              <a class="footer-card" href="">
+                <img
+                  src="./images/Instagram-128.webp"
+                  alt=""
+                  class="footer-images"
+                  width="35px"
+                  height="35px"
+                />
+              </a>
+              <a href="" class="footer-card">
+                <img
+                  src="./images/Telegram-128.webp"
+                  alt=""
+                  class="footer-images"
+                  width="35px"
+                  height="35px"
+                />
+              </a>
+              <a href="" class="footer-card">
+                <img
+                  src="./images/youtube-128.webp"
+                  alt=""
+                  class="footer-images"
+                  width="35px"
+                  height="35px"
+                />
+              </a>
+              <a href="" class="footer-card">
+                <img
+                  src="./images/83-facebook-128.webp"
+                  alt=""
+                  class="footer-images"
+                  width="35px"
+                  height="35px"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>

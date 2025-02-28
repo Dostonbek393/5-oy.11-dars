@@ -1,0 +1,285 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+img {
+  object-fit: cover;
+  display: flex;
+}
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: aliceblue;
+}
+
+.container {
+  width: 100%;
+  max-width: 1111px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: rgb(245, 245, 245);
+  justify-content: space-between;
+}
+
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 5px #ff5733, 0 0 5px #ff5733;
+  }
+  50% {
+    box-shadow: 0 0 5px #ffbd33, 0 0 5px #ffbd33;
+  }
+  100% {
+    box-shadow: 0 0 5px #ff5733, 0 0 5px #ff5733;
+  }
+}
+
+.card {
+  position: relative;
+  width: 30%;
+  text-align: center;
+  border: 2px solid #ddd;
+  border-radius: 1rem;
+  padding: 10px;
+  background-color: linear-gradient(135deg, #ff5733, #ffbd33);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: block;
+  animation: glowing 2s infinite alternate;
+}
+
+.cart-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.cart-icon:hover {
+  transform: scale(1.2);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  animation: glowing 1s infinite alternate;
+}
+
+.images {
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
+  border-radius: 1rem;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.images:hover {
+  transform: scale(1.2);
+}
+
+.images:active {
+  filter: blur(5px);
+}
+
+.title {
+  font-size: 1.6rem;
+  margin: 10px 0;
+  color: black;
+}
+
+.card-prices {
+  padding: 7px;
+  width: 12rem;
+  height: 3rem;
+  border-radius: 5px;
+  border: 0px solid #111;
+  background-color: #faf212;
+  margin-bottom: 5px;
+}
+
+.prices {
+  color: black;
+  font-size: 1.4rem;
+}
+
+.rating {
+  color: black;
+  font-size: 1.4rem;
+  text-align: start;
+  padding-left: 20px;
+}
+
+.boxs {
+  width: 30rem;
+  align-items: center;
+  background-color: white;
+  border: 2px solid #ccc;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  animation: glowing 2s infinite alternate;
+}
+
+.boxs:hover {
+  transform: translateY(-10px);
+}
+
+.boxs input {
+  background-color: #f1f1f1;
+  border: none;
+  width: 40rem;
+  padding: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boxs button:hover {
+  background-color: #ddd;
+}
+
+.box-discription {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #111;
+  padding-bottom: 1rem;
+}
+
+.hero {
+  display: flex;
+  gap: 20px;
+}
+
+.hero-button {
+  padding: 5px;
+  width: 17rem;
+  height: 4rem;
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+
+.hero-button:hover {
+  background-color: rgba(195, 193, 193, 0.608);
+  transform: scale(1.1);
+}
+
+.hero-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: black;
+}
+
+.footer-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-titles {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.footer-text {
+  font-weight: 800;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+.footer-texts {
+  margin-bottom: 20px;
+  color: #bababa;
+}
+
+.footer-img {
+  display: flex;
+  gap: 7px;
+  margin-top: 20px;
+}
+
+.footer-card:hover {
+  transform: scale(1.3);
+}
+
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  animation: spin 4s infinite;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  grid-area: 1/1;
+  border: 8px solid;
+  border-radius: 50%;
+  border-color: red red transparent transparent;
+  mix-blend-mode: darken;
+  animation: spin 1s infinite linear;
+}
+
+.loader::after {
+  border-color: transparent transparent blue blue;
+  animation-direction: reverse;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
